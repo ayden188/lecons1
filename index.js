@@ -1,9 +1,13 @@
-
-
-
 import { loadHome } from './home.js';
 
-loadHome(); // Lancement immédiat
+// 1. Charger l'accueil immédiatement
+loadHome();
 
-document.querySelector("#home").addEventListener("click", loadHome);
-// Ajoute ton listener pour le menu ici plus tard
+// 2. Écouter les clics
+const homeBtn = document.querySelector("#home");
+homeBtn.addEventListener("click", () => {
+    console.log("Clic sur Home !"); // Vérifie dans la console si ça s'affiche
+    loadHome();
+});
+console.log('eli');
+
